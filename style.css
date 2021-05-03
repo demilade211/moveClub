@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300&display=swap');
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Signika', sans-serif;
+}
+section{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+.img-box{
+    position: relative;
+    display: flex;
+    background-size: 100% 100%;
+    width: 65%;
+    height: 100%;
+    background: #8E0E00;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1F1C18, #8E0E00);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1F1C18, #8E0E00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.img-box::after{
+    content: '';
+    width: 100%;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.6);
+}
+.img-box img{
+    width: 100%;
+    position: relative;
+    mix-blend-mode: screen;
+    
+}
+.text-box{
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.welc-text h1{
+    color: white;
+    font-size: 8.5vmin;
+}
+.welc-para p{
+    color: white;
+    font-size: 2vmin;
+    word-break: break-all;
+}
+.form-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    height: 100%;
+}
+.form{
+    width: 70%;
+    height:90%;
+    display: flex;
+    flex-direction: column;
+}
+.inside-form{
+    padding: 5px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.form-header{
+    border-bottom: 3px solid;
+    border-color: #1F1C18;
+}
+.form-header h3{
+    font-size: 30px;
+    color: #8E0E00;
+
+}
+.input{
+    width: 100%;
+}
+.input input{
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgb(29, 25, 25);
+    color: black;
+    padding: 0 20px;
+    margin-top: 9px;
+}
+.label label{
+    color: black;
+    font-weight: bold;
+}
+#sub-btn{
+    background: linear-gradient(to right, #1F1C18, #8E0E00);
+    color: white;
+    cursor: pointer;
+}
+.sec2{
+    padding: 40px 10px;
+     justify-content: center;
+     align-items: center;
+     height: auto;
+     border-top: 1px solid grey;
+}
+.table-con{
+    width: 80%;
+    height: auto;
+    overflow-x: auto;
+}
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 100%;
+    height: auto;
+    empty-cells: hide;
+    min-width: 500px;
+}
+table thead th{
+    padding: 20px 0;
+}
+table thead tr{
+    background-color: #8E0E00;
+    color: white;
+}
+tbody{
+    text-align: center;
+}
+tbody tr{
+    border: 1px solid black;
+}
+table tbody td{
+    padding: 20px 0;
+}
+i{
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1100px) {
+    .img-box{
+        width: 100%;
+    }
+    .form-box{
+        z-index: 2;
+        background-color: white;
+        left: 15%;
+        top: 6%;
+        width: 70%;
+        height: 90%;
+        position: absolute;
+        display: flex;
+    }
+    .input input{
+        width: 90%;
+    }
+    .welc-text h1{
+        display: none;
+    }
+    .welc-para p{
+        display: none;
+    }
+   
+}
